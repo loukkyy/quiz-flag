@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Flag</title>
+    <link rel="stylesheet" href="quiz.css" />
+    <script src="quiz.js" defer></script>
+    <style>
+      #modal.open {
+        display: block;
+      }
+  
+      #overlay.open {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="flag-section">
+      <p class="flag-icon">🇫🇷</p>
+      <p class="question">What is this country?</p>
+      <p data-score>Question 0/10 - Score 0</p>
+    </section>
+    <section class="answers-section">
+      <ul class="answer-list">
+      </ul>
+    </section>
+    
+    <div id="overlay"></div>
+    <div id="modal">
+        <div id="modal-content">You score: </div>
+        <button id="close-modal-btn">New Game</button>
+        <div>
+          <p class="score-message">Congratulation!</p>
+          <a href="list.html">List of countries</a>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.flag-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flag-icon {
+    font-size: clamp(1rem, 20vw, 10rem);
+}
+.question {
+    margin: 0.5em 0;
+}
+.answers-section {
+    padding: 2em;
+}
+
+.answers-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.answer {
+    border: 1px solid hsl(16, 100%, 86%);
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.2em;
+}
+
+.answer:hover,
+.answer:hover {
+    border-color: hsl(16, 100%, 66%);;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: rgb(101, 252, 101);
+}
+.incorrect {
+    background-color: rgb(253, 95, 67);
+}
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: .25rem;
+    background-color: white;
+  }
+  
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+  }
