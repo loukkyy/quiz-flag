@@ -1,69 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right top,
+    hsl(239, 35%, 58%),
+    hsl(239, 35%, 78%)
+  );
+}
+.container {
+  z-index: 1;
 }
 .flag-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .flag-icon {
-    font-size: clamp(1rem, 20vw, 10rem);
+  font-size: clamp(1rem, 20vw, 10rem);
 }
 .question {
-    margin: 0.5em 0;
+  margin: 0.5em 0;
 }
 .answers-section {
-    padding: 2em;
+  padding: 2em;
+  width: 80vw;
 }
 
 .answers-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .answer {
-    border: 1px solid hsl(16, 100%, 86%);
-    text-align: center;
-    padding: 0.5em;
-    margin: 0.2em;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1.5em 0;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.6),
+    0px 0px 15px hsla(0, 0%, 0%, 0.5);
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(0.5rem);
 }
 
-.answer:hover,
 .answer:hover {
-    border-color: hsl(16, 100%, 66%);;
-    cursor: pointer;
+  background-color: hsl(194, 100%, 66%);
+  cursor: pointer;
 }
 
 .correct {
-    background-color: rgb(101, 252, 101);
+  background-color: rgb(101, 252, 101) !important;
 }
 .incorrect {
-    background-color: rgb(253, 95, 67);
+  background-color: rgb(253, 95, 67) !important;
 }
 #modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-    padding: 1rem;
-    border-radius: .25rem;
-    background-color: white;
-  }
-  
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .75);
-  }
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 5%;
+  right: 5%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 5%;
+}
