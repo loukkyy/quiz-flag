@@ -61,6 +61,7 @@ function loadQuestion() {
     // add event listener
     answerItem.addEventListener("click", (e) => {
       checkAnswer(answerItem)
+      e.target.blur()
     })
     answerList.append(answerItem)
   })
