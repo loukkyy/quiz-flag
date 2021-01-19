@@ -15,7 +15,7 @@ main {
   min-height: 100vh;
   background: linear-gradient(
     to right top,
-    hsl(239, 35%, 58%),
+    hsl(238, 35%, 58%),
     hsl(239, 35%, 78%)
   );
 }
@@ -77,10 +77,15 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid black;
-  padding: 1rem;
-  border-radius: 0.25rem;
+  border: none;
+  border-radius: 0.5rem;
   background-color: white;
+  z-index: 2;
+  color: black;
+  background-color: hsl(138, 41%, 76%);
+  min-height: 40vh;
+  min-width: 50vw;
+  place-items: center;
 }
 
 #overlay {
@@ -91,6 +96,19 @@ main {
   right: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+#modal.open {
+  display: grid;
+}
+
+#overlay.open {
+  display: block;
+}
+#close-modal-btn {
+  align-self: flex-end;
+  width: 100%;
+  border-radius: 0 0 0.25em 0.25em;
 }
 .circle1,
 .circle2 {
@@ -112,4 +130,20 @@ main {
 .circle2 {
   bottom: 5%;
   left: 5%;
+}
+.btn {
+  margin: 0;
+  padding: 0.25em;
+  outline: none;
+  font: inherit;
+  font-size: 1.5rem;
+  border-radius: 0.25em;
+  border: none;
+  background: none;
+}
+.btn:hover {
+  background-color: hsl(138, 41%, 56%);
+}
+#modal-content {
+  padding: 0.5em;
 }

@@ -1,5 +1,5 @@
 import setupModal from "./modal.js"
-import countries from "./countries.json"
+import countries from "../countries.json"
 const scoreElement = document.querySelector("[data-score]")
 let score = 0
 let questionId = 0
@@ -80,8 +80,8 @@ function getNewAnswer(answerOptions) {
 function showScore() {
   modal.classList.add("open")
   overlay.classList.add("open")
-  const modalContent = document.querySelector("#modal-content")
-  modalContent.innerText = `Your score: ${score}/10`
+  const scoreText = document.querySelector("#score-text")
+  scoreText.innerText = `Your score: ${score}/10`
   const scoreMessage = document.querySelector(".score-message")
   if (score <= 5) {
     scoreMessage.innerText =
@@ -109,7 +109,7 @@ function newGame() {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker
-      .register("service-worker.js")
+      .register("../service-worker.js")
       .then((res) => console.log("service worker registered"))
       .catch((err) => console.log("service worker not registered", err))
   })

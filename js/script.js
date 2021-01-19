@@ -1,5 +1,5 @@
 import setupModal from "./modal.js"
-import countries from "./countries.json"
+import countries from "../countries.json"
 const container = document.querySelector(".container")
 
 setupModal()

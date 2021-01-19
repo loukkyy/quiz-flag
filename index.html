@@ -5,23 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Flag</title>
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="quiz.css" />
-    <script src="quiz.js" defer></script>
+    <link rel="stylesheet" href="css/quiz.css" />
+    <script src="js/quiz.js" defer></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <style>
-      #modal.open {
-        display: block;
-      }
-
-      #overlay.open {
-        display: block;
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -41,12 +32,12 @@
 
     <div id="overlay"></div>
     <div id="modal">
-      <div id="modal-content">You score:</div>
-      <button id="close-modal-btn">New Game</button>
-      <div>
+      <div id="modal-content">
+        <div id="score-text">You score:</div>
         <p class="score-message">Congratulation!</p>
         <a href="list.html">List of countries</a>
       </div>
+      <button id="close-modal-btn" class="btn">New Game</button>
     </div>
   </body>
 </html>
